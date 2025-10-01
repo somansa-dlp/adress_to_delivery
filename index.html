@@ -27,7 +27,7 @@
 
         body {
             font-family: 'Noto Sans KR', sans-serif;
-            background-color: var(--navy-deep); /* 고급스러운 네이비 배경 */
+            background-color: var(--navy-deep);
             padding: 20px;
             display: flex;
             justify-content: center;
@@ -106,7 +106,6 @@
         .address-group button:hover { background-color: #212529; }
         input[readonly] { background-color: #f1f3f5; cursor: default; }
 
-        /* 체크박스 영역 분리 */
         .certify-group, .consent-group {
             margin-top: 30px;
             padding: 20px;
@@ -131,7 +130,6 @@
              color: #212529;
         }
 
-        /* 개인정보 처리방침 상세 내용 */
         .consent-details {
             margin-top: 20px;
             padding-top: 20px;
@@ -214,13 +212,13 @@
         </form>
     </div>
 
-    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="//t1.daqmcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 
     <script>
         // ===================================================================
-        // [최종] 디버깅용 스크립트가 배포된 새 URL로 교체되었습니다.
+        // 최종 URL로 교체되었습니다.
         // ===================================================================
-        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyfvKGQEjRcVcubvsGKHucWZCOkzZuD8RJK1kfpBIdFZ0JHhnvdOuc5yHuVQ5ZU2qud/exec';
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw8_jozY0_ANYZzr3dWqjz0LvEnGa0st--CGQ8xuHyrL1N9SGTLhb7KepnkBgTbYiiB/exec';
 
         function findAddress() { new daum.Postcode({ oncomplete: function(data) { document.getElementById('zipCode').value = data.zonecode; document.getElementById('address1').value = data.address; document.getElementById('address2').focus(); }}).open(); }
         function autoHyphen(target) { target.value = target.value.replace(/[^0-9]/g, '').replace(/^(\d{0,3})(\d{0,4})(\d{0,4})$/g, "$1-$2-$3").replace(/(\-{1,2})$/g, "");}
