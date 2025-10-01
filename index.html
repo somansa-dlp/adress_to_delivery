@@ -155,7 +155,7 @@
             margin-top: 35px; transition: background-color 0.2s ease, transform 0.2s ease;
         }
         .submit-btn:hover:not(:disabled) {
-            background-color: #061A2D; /* 호버 시 더 진한 네이비 */
+            background-color: #061A2D;
             transform: translateY(-2px);
         }
         .submit-btn:disabled {
@@ -218,9 +218,9 @@
 
     <script>
         // ===================================================================
-        // [최종] 방금 주신 새 URL로 교체되었습니다.
+        // [최종] 디버깅용 스크립트가 배포된 새 URL로 교체되었습니다.
         // ===================================================================
-        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwqBlEmF0EPtfOLfZVOYQa2x-avxv4OV2LS7lVIo5W0tHQ0ivKmcNjHR5WbSfJVFZZH/exec';
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyfvKGQEjRcVcubvsGKHucWZCOkzZuD8RJK1kfpBIdFZ0JHhnvdOuc5yHuVQ5ZU2qud/exec';
 
         function findAddress() { new daum.Postcode({ oncomplete: function(data) { document.getElementById('zipCode').value = data.zonecode; document.getElementById('address1').value = data.address; document.getElementById('address2').focus(); }}).open(); }
         function autoHyphen(target) { target.value = target.value.replace(/[^0-9]/g, '').replace(/^(\d{0,3})(\d{0,4})(\d{0,4})$/g, "$1-$2-$3").replace(/(\-{1,2})$/g, "");}
